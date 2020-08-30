@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container-fluid mt-4">
+  <div class="jumbotron">
+    <h1 class="text-center">Welcome {{ user.username }}</h1>
+  </div>
+  <button
+    class="collapsible bg-primary nooutline"
+    data-toggle="modal"
+    data-target="#modalInfo"
+  >
+    Change Information
+  </button>
+</div>
+
+<!-- Modal Info -->
+{% include 'partials/modalInfo.html' %} {% endblock %}
